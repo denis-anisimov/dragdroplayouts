@@ -31,6 +31,10 @@ public abstract class VDDAbstractDropHandler<W extends Widget> extends VAbstract
   public ApplicationConnection getApplicationConnection() {
     return connector.getConnection();
   }
+  
+  public void cancelDrag(VDragEvent drag) {
+        dragLeave(drag);
+  }
 
   @Override
   protected void dragAccepted(VDragEvent drag) {
